@@ -12,18 +12,12 @@ It can be used to test the available outputs and inputs from the PRUs.  The
 output pins can be set to toggle at 1 Hz and the state of input only pins
 can be read.  The driver uses pins:
 
-  P8.11 - P8.12
-  P8.20 - P8.21
-  P8.27 - P8.30
-  P8.39 - P8.46
-  P9.24
-  P9.27 - P9.31
-  P9.41 - P9.42
+  P8.11 - P8.12, P8.20 - P8.21, P8.27 - P8.30, P8.39 - P8.46, P9.24,
+  P9.27 - P9.31, P9.41 - P9.42
 
 as outputs, and pins:
 
-  P8.15 - P8.16
-  P9.25 - P9.26
+  P8.15 - P8.16, P9.25 - P9.26
 
 as inputs.  Note that HDMI and eMMC must be disabled for all of these pins
 to be available for use.
@@ -64,7 +58,7 @@ The firmware may then be loaded by running the command:
  
 To verify that the driver firmware loaded correctly, look for the message:
 
-  pru-rproc 4a300000.prurproc: P0 PUTS 'PRU0: Starting Wiegand Firmware'
+  pru-rproc 4a300000.prurproc: P0 PUTS 'PRU0: Starting GPIO test firmware'
 
 on either the serial console or in the output of the “dmesg” command.
 Another check is to verify the presence of the “/dev/vport0p0” device node.
